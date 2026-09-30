@@ -168,14 +168,33 @@ input[type='search']::-webkit-search-cancel-button {
   place-items: center;
   border-radius: 20px;
 }
-.demo-badge {
+.employer-disclosure {
   margin-left: auto;
-  border: 1px solid #80b6ff;
-  background: #ffffff0a;
-  padding: 5px 11px;
-  font-size: 12px;
-  border-radius: 6px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 7px 12px;
+  border-radius: 7px;
+  background: #fff;
+  color: #174b91;
   white-space: nowrap;
+  line-height: 1.5;
+}
+.employer-disclosure > span {
+  font-size: 10px;
+  color: #526580;
+}
+.employer-disclosure strong {
+  font-size: 12px;
+  font-weight: 700;
+}
+.employer-disclosure:hover {
+  background: #edf4ff;
+}
+.employer-disclosure:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 4px;
 }
 .intro {
   background: white;
@@ -1054,9 +1073,17 @@ input[type='search']::-webkit-search-cancel-button {
   .desktop-nav {
     display: none;
   }
-  .demo-badge {
-    font-size: 10px;
-    padding: 4px 9px;
+  .employer-disclosure {
+    padding: 5px 8px;
+  }
+  .header-inner {
+    padding: 0 16px;
+    gap: 10px;
+  }
+  .brand {
+    flex-shrink: 0;
+    font-size: 22px;
+    gap: 7px;
   }
   .intro-inner {
     padding: 25px 20px 27px;

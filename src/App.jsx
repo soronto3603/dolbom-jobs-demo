@@ -253,6 +253,16 @@ export default function App() {
           <nav className="desktop-nav" aria-label="주 메뉴">
             {renderNav()}
           </nav>
+          <a
+            className="employer-disclosure"
+            href="https://www.moel.go.kr/info/defaulter/defaulterList.do"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="고용노동부 체불사업주 명단 확인 (새 창)"
+          >
+            <span>고용노동부</span>
+            <strong>체불사업주 명단 확인 <span aria-hidden="true">↗</span></strong>
+          </a>
         </div>
       </header>
       <div id="main">

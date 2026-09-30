@@ -6,7 +6,6 @@ export default function Filters({
   regions,
   districts,
   types,
-  counts,
   reset,
   prefix = 'desktop',
 }) {
@@ -67,7 +66,6 @@ export default function Filters({
               }
             />
             <span>{type}</span>
-            <small>{counts[type].toLocaleString()}</small>
           </label>
         ))}
       </fieldset>

@@ -189,7 +189,6 @@ export default function App() {
     regions,
     districts,
     types,
-    counts,
     reset,
   }
   const title =
@@ -203,7 +202,7 @@ export default function App() {
     navigate(next)
   }
   const renderNav = (mobile = false) =>
-    NAV.map((item) => (
+    NAV.filter((item) => item.path === '/').map((item) => (
       <a
         key={item.path}
         href={item.path}
@@ -254,7 +253,6 @@ export default function App() {
           <nav className="desktop-nav" aria-label="주 메뉴">
             {renderNav()}
           </nav>
-          <span className="demo-badge">웹 데모</span>
         </div>
       </header>
       <div id="main">
@@ -305,19 +303,7 @@ export default function App() {
                       : '이 브라우저에 저장한 공고를 확인할 수 있어요'}
                   </p>
                 </div>
-                <div className="intro-count">
-                  <strong>
-                    {(path === '/saved'
-                      ? saved.length
-                      : path === '/recent'
-                        ? recent.length
-                        : jobs.length
-                    ).toLocaleString()}
-                  </strong>
-                  <span>
-                    {path === '/' ? '개의 돌봄 일자리' : '개의 저장된 공고'}
-                  </span>
-                </div>
+
               </div>
             </section>
             <main className="workspace">
@@ -382,7 +368,6 @@ export default function App() {
                       }
                     >
                       {type}
-                      <span>{counts[type].toLocaleString()}</span>
                     </button>
                   ))}
                 </div>
@@ -405,9 +390,6 @@ export default function App() {
                   </div>
                 )}
                 <div className="results-toolbar" ref={results}>
-                  <p role="status">
-                    전체 <strong>{filtered.length.toLocaleString()}</strong>건
-                  </p>
                   <label className="sr-only" htmlFor="sort">
                     정렬
                   </label>
@@ -519,7 +501,7 @@ export default function App() {
                   </nav>
                 )}
                 <p className="snapshot-note">
-                  {data.capturedAt.slice(0, 10).replaceAll('-', '.')} 기준 데모
+                  {data.capturedAt.slice(0, 10).replaceAll('-', '.')} 기준
                   공고 · 실제 모집 여부는 확인 필요
                 </p>
               </section>
@@ -555,7 +537,7 @@ export default function App() {
             className="primary apply-filters"
             onClick={() => dialog.current.close()}
           >
-            {filtered.length.toLocaleString()}개 공고 보기
+            공고 보기
           </button>
         </div>
       </dialog>

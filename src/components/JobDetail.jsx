@@ -116,7 +116,7 @@ export default function JobDetail({ job, saved, onSave, onBack }) {
           </button>
           <p className="small-note">이 브라우저에만 저장</p>
           <div className="detail-notice">
-            <strong>데모 안내</strong>
+            <strong>공고 안내</strong>
             <p>
               저장된 시점의 공고 정보입니다
               <br />

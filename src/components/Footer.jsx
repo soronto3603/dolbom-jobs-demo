@@ -28,7 +28,7 @@ export default function Footer() {
       </dl>
       <div className="footer-bottom">
         <small>© {new Date().getFullYear()} 돌봄다리</small>
-        <span>일자리찾기 웹 데모</span>
+        <span>일자리 찾기</span>
       </div>
     </footer>
   )

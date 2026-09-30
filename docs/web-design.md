@@ -29,7 +29,9 @@
 - React와 Vite 정적 빌드, Node 22, 빌드 명령 `npm run build`, 게시 폴더 `dist`
 - Netlify `netlify.toml`에서 상세 경로 새로고침용 SPA rewrite와 헤더 설정
 - 데이터 스냅샷 포함으로 빌드 및 웹 실행 시 Supabase 키 불필요
-- 도메인 지정 및 Netlify 사이트 생성은 후속 연결 범위
+- Netlify 사이트 `dolbom-jobs-demo.netlify.app`, 기본 도메인 `jobs.carebridges.kr`
+- 호스팅케이알 외부 DNS CNAME 연결 및 Netlify 소유권 검증 완료
+- Let’s Encrypt 인증서 적용 및 실제 도메인의 HTTPS 목록·상세·푸터 확인
 
 ## 검증 순서
 

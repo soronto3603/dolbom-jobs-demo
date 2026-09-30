@@ -1,3 +1,4 @@
+import Footer from './components/Footer.jsx'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import dataUrl from '../web-data/jobs.json?url'
 import Icon from './components/Icon.jsx'
@@ -526,11 +527,7 @@ export default function App() {
           </>
         )}
       </div>
-      <footer className="site-footer">
-        <strong>돌봄다리</strong>
-        <span>사람과 돌봄, 일자리를 잇다</span>
-        <small>일자리찾기 웹 데모</small>
-      </footer>
+      <Footer />
       <nav className="mobile-nav" aria-label="모바일 메뉴">
         {renderNav(true)}
       </nav>

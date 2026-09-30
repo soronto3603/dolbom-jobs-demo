@@ -42,9 +42,11 @@ Netlify에서 GitHub 저장소 `soronto3603/dolbom-jobs-demo` 연결
 
 데이터는 해시가 붙은 정적 파일로 배포, 브라우저 또는 Netlify 환경의 Supabase 키 불필요
 
-서비스 주소 [jobs.carebridges.kr](https://jobs.carebridges.kr), Netlify 사이트 `dolbom-jobs-demo.netlify.app`
+서비스 주소 [www.carebridges.kr](https://www.carebridges.kr), Netlify 사이트 `dolbom-jobs-demo.netlify.app`
 
-호스팅케이알 DNS의 `jobs` CNAME을 `dolbom-jobs-demo.netlify.app`으로 연결, TTL 180초
+호스팅케이알 DNS의 `www`와 `jobs` CNAME을 `dolbom-jobs-demo.netlify.app`으로 연결, 루트 `@` A 레코드는 `75.2.60.5`, TTL 180초
+
+기본 주소 `www.carebridges.kr`, 루트 `carebridges.kr`은 기본 주소로 이동, `jobs.carebridges.kr` 별칭 유지
 
 Netlify 소유권 확인용 `subdomain-owner-verification` TXT 등록 및 기본 도메인 지정 완료
 
